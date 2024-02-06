@@ -1,0 +1,163 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #e4ba11, #d52361);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+#calculator-container {
+    max-width: 320px;
+    width: 340px;
+    height: 560px;
+    background-color: black;
+    margin: auto;
+    padding: 20px;
+    top: 37px;
+    position: relative;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(233, 93, 142, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: background-color 0.5s ease;
+}
+
+#result-container {
+    height: 180px;
+    border-width: 2px;
+    border-color: #f787bf; 
+    border-radius: 5px;
+    background-color: #b0bfad; 
+    font-size: fit-content;
+    overflow: scroll;
+    font-family: 'Orbitron', sans-serif;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+#history-container {
+    text-align: right;
+    height: 20px;
+    margin: 0 20px;
+    padding-top: 20px;
+    font-size: 15px;
+    color: #a37078; 
+}
+
+#result-container::-webkit-scrollbar {
+    display: none;
+}
+
+#history-container::-webkit-scrollbar {
+    display: none;
+}
+
+#output-container {
+    text-align: right;
+    height: 60px;
+    margin: 10px 20px;
+    font-size: 30px;
+    color: black; 
+}
+
+#keyboard-container {
+    height: 380px;
+    background-color: #aaaaaa;
+    border-radius: 20px;
+}
+
+.calc-button,
+.empty-button {
+    color:#ffffff;
+    width: 50px;
+    height: 50px;
+    margin: 13px;
+    float: left;
+    border-radius: 60%;
+    border-width: 0;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.calc-button,
+.empty-button {
+    background-color: #3a0a32; 
+}
+
+.calc-button,
+.calc-button:active,
+.calc-button:focus,
+.empty-button,
+.empty-button:active,
+.empty-button:focus {
+    cursor: pointer;
+    outline: 0;
+}
+
+.calc-button:active,
+.empty-button:active {
+    font-size: 13px;
+    transform: scale(0.8);
+}
+
+.calc-button:nth-child(4) {
+    font-size: 20px;
+    background-color: orange; 
+}
+
+.calc-button:nth-child(8) {
+    font-size: 20px;
+    background-color: orange; 
+}
+
+.calc-button:nth-child(12) {
+    font-size: 20px;
+    background-color: orange; 
+}
+
+.calc-button:nth-child(16) {
+    font-size: 20px;
+    background-color: orange; 
+}
+
+.calc-button:nth-child(20) {
+    font-size: 20px;
+    background-color: rgb(85, 180, 50); 
+}
+
+.calc-button {
+    transition: background-color 0.1s ease;
+}
+
+.calc-button:hover {
+    background-color: #ff7f7f;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+#power.off {
+    background-color: darkgray;
+}
+
+#calculator-container.off {
+    background-color: #333; /* Dark color */
+}
+
+#calculator-container.off .calc-button {
+    pointer-events: none; /* Disable inputs */
+}
+
+#result-container.off {
+    background-color: #333; /* Dark color */
+    color: #333; /* Same color as the background to hide the text */
+}
